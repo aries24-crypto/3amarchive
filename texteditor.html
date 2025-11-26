@@ -4,121 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Utility Hub with AI Assistant</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load jsPDF library for PDF generation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <!-- Load html2canvas for converting formatted HTML/Rich Text to canvas/image for PDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    
-    <!-- SYNTAX HIGHLIGHTING (PrismJS) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-okaidia.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-autoloader.min.js"></script>
-    
-    <style>
-        /* Hide scrollbar on the editor but allow scrolling */
-        #textEditor {
-            min-height: 300px;
-            max-height: 500px;
-            overflow-y: auto;
-            /* Custom scrollbar for aesthetics */
-            scrollbar-width: thin;
-            scrollbar-color: #6366f1 #e5e7eb;
-            /* Default font for editor, ensures consistency */
-            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
-            font-size: 1rem;
-        }
-        #textEditor::-webkit-scrollbar {
-            width: 8px;
-        }
-        #textEditor::-webkit-scrollbar-thumb {
-            background-color: #6366f1;
-            border-radius: 4px;
-        }
-        #textEditor::-webkit-scrollbar-track {
-            background-color: #e5e7eb;
-        }
-
-        /* Custom styles for better button contrast */
-        .btn-primary {
-            @apply bg-indigo-600 text-white hover:bg-indigo-700 transition duration-150 ease-in-out;
-        }
-        .btn-secondary {
-            @apply bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 transition duration-150 ease-in-out;
-        }
-        
-        /* Base style for toolbar buttons: dark gray text by default, simple hover background */
-        .toolbar-btn {
-            @apply p-2 rounded-lg hover:bg-gray-200 text-gray-800;
-        }
-        
-        /* Style for active buttons: ONLY text color change to red, forcing background to match toolbar (white) to avoid any shadow or tint. */
-        .toolbar-active { 
-            /* Only change the text color */
-            @apply text-red-600; 
-            /* Explicitly override any background/shadow to ensure it looks like nothing changed */
-            @apply bg-white shadow-none; 
-        }
-
-        /* Styling for Prism code blocks within the contenteditable area */
-        #textEditor pre {
-            @apply my-4 p-4 rounded-lg overflow-x-auto;
-            /* Use Prism theme background color */
-            background-color: #272822 !important; 
-        }
-
-        /* Ensure code text color contrasts with the dark background */
-        #textEditor pre code {
-            font-family: monospace;
-            color: #f8f8f2 !important;
-        }
-
-        /* --- VIRTUAL KEYBOARD STYLES --- */
-        .keyboard-key {
-            @apply flex items-center justify-center p-2 rounded-lg bg-white shadow-md hover:bg-indigo-100 transition duration-150 cursor-pointer select-none text-xl font-medium;
-            height: 50px;
-            min-width: 40px;
-            flex-grow: 1;
-            font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
-            font-size: 1.2rem; /* Larger font for keys */
-        }
-        .space-key {
-            flex-grow: 5;
-            @apply bg-gray-200 hover:bg-gray-300;
-        }
-        .control-key {
-            @apply bg-indigo-600 text-white hover:bg-indigo-700 text-sm font-semibold;
-            flex-grow: 1.5;
-            font-size: 0.875rem;
-        }
-        .shift-active {
-            @apply !bg-indigo-900;
-        }
-
-        /* Style for selected images to provide a visual cue */
-        .image-selected {
-            outline: 2px solid #6366f1;
-            outline-offset: 4px;
-            cursor: pointer;
-        }
-    </style>
-    <script>
-        // Set up Tailwind configuration for custom colors and font
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        'primary': '#4f46e5',
-                        'secondary': '#6366f1',
-                    }
-                }
-            }
-        }
-    </script>
+   
 </head>
 <body class="bg-gray-50 min-h-screen p-4 md:p-8 font-sans">
 
@@ -126,4 +12,5 @@
 </body>
 
 </html>
+
 
